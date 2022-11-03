@@ -39,6 +39,7 @@ jobs:
           PUBLIC_URL: ${{ secrets.PUBLIC_URL }}
           FETCH_WITH: "GraphQL"
           DEBUG: "sitecore-jss:*,-sitecore-jss:layout"
+          JSS_MODE: "CONNECTED"
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
