@@ -38,6 +38,7 @@ jobs:
           SUDO_USER: ${{ secrets.SUDO_USER }}
           PUBLIC_URL: ${{ secrets.PUBLIC_URL }}
           FETCH_WITH: "GraphQL"
+          DEBUG: "sitecore-jss:*,-sitecore-jss:layout"
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
